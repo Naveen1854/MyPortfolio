@@ -1,0 +1,31 @@
+/* ===== FOOTER =====  */
+
+
+.footer-content {
+  background-color: #001220;
+  text-align: center;
+  color: white;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.footer svg {
+  color: white;
+}
+
+.wave {
+  margin-bottom: -1px;
+}
+
+.footer-icons {
+  color: white;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s;
+}
+
+.footer-content .footer-icons:hover {
+  color: cyan;
+  transform: scale(1.5);
+  cursor: pointer;
+}

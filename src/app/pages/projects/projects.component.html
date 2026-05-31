@@ -1,0 +1,52 @@
+<div>
+  <app-header></app-header>
+
+  <!-- Intro to projects -->
+  <div class="container projects-intro">
+    <div class="row flex-with-center mt-5">
+      <div class="col-md-6 n-box2 px-3 py-5">
+        <div>
+          <h1 class="font-bold">Projects</h1>
+          <p class="font-bold">
+            Great ideas don't become reality overnight; they demand dedicated practice and unwavering patience to be
+            embraced.
+          </p>
+          <button class="primary-button" (click)="scrollToProjects()">Get Started
+          </button>
+        </div>
+      </div>
+
+      <!-- Blob -->
+      <div class="col-md-6 position-relative">
+        <img src="./assets/images/blob-blue.svg" alt="" class="w-100" />
+        <svg class="position-absolute top-50 start-50 translate-middle" xmlns="http://www.w3.org/2000/svg" width="180"
+          height="180" viewBox="0 0 24 24" fill="white">
+          <path
+            d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- List of projects -->
+  <div class="container projects-list" id="projectsList">
+    <h3 class="font-bold">My Projects</h3>
+    <hr />
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of projects">
+        <div class="card h-100">
+          <img [src]="project.image" [alt]="project.title" class="card-img-top">
+
+          <div class="card-body">
+            <h5>{{ project.title }}</h5>
+            <p>{{ project.description }}</p>
+
+            <a [href]="project.link" target="_blank" class="btn btn-primary">
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

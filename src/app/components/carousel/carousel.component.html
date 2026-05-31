@@ -1,0 +1,11 @@
+<div class="carousel-parent position-relative">
+  <h1 class="position-absolute top-0 start-0 end-0 text-center mt-5">
+    Technologies I use
+  </h1>
+
+  <div class="gallery" [style.--total]="icons.length">
+    <span *ngFor="let icon of icons" [style.--i]="icon.i">
+      <i [class]="icon.class" [style.color]="icon.color"></i>
+    </span>
+  </div>
+</div>

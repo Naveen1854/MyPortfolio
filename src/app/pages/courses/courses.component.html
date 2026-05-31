@@ -1,0 +1,48 @@
+<div>
+  <app-header></app-header>
+
+  <div class="courses-intro" style="background-image: url('./assets/images/courses.svg')">
+    <div class="courses-intro-content">
+      <h1>About Me</h1>
+      <div>
+        <p>
+          "I'm an adept programmer, skilled in communication and adaptable. Proficient in Frontend and Backend
+          technologies,
+          with Java Full Stack expertise. Strong in Data Structures, Algorithms, and collaborative problem-solving.
+          Committed to
+          team success, effective in building social connections."
+        </p>
+        <button class="primary-button" (click)="scrollToWhyMe()">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-me-parent" id="whyme">
+    <div class="why-me n-box1 flex-with-center">
+      <h1>Why Me?</h1>
+      <div class="why-me-content">
+        <p>I thrive in the electrifying arena of competitive programming.</p>
+        <br />
+        <p>So, confronting novel challenges is not just a habit! it's my exhilarating journey to perpetual growth and
+          triumph.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container projects-list">
+    <h3 class="font-bold">My Skills</h3>
+    <hr />
+    <div class="row">
+      <div class="col-md-4" *ngFor="let skill of skills">
+        <div class="position-relative project">
+          <img [src]="skill.image" [alt]="skill.title" class="w-100" />
+          <div class="project-content w-100">
+            <h3>{{ skill.title }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

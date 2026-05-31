@@ -1,0 +1,28 @@
+<div>
+  <app-header></app-header>
+
+  <div class="container contact mt-5">
+    <div class="row pt-5">
+      <div class="col-md-6 p-5">
+        <img src="./assets/images/contactme.svg" alt="contact-us" />
+      </div>
+
+      <div class="col-md-6">
+        <form
+          class="contact-form m-2 p-5 n-box2"
+          action="mailto:kusuma.naveen1854@gmail.com"
+          method="post"
+          enctype="text/plain"
+          (ngSubmit)="onSubmit()"
+        >
+          <h3 class="font-bold">Contact Me</h3>
+          <hr />
+          <input type="text" class="form-control" name="Name" placeholder="Name" />
+          <input type="email" class="form-control" name="Email" placeholder="Email" />
+          <textarea class="form-control" name="Description" rows="3" placeholder="Description"></textarea>
+          <button class="primary-button mt-3" type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,181 @@
+/* ===== GENERAL ===== */
+
+.projects-intro {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.flex-with-center {
+  align-items: center;
+}
+
+/* ===== INTRO SECTION ===== */
+
+.n-box2 {
+  padding: 30px;
+}
+
+.n-box2 h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.n-box2 p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===== BUTTON ===== */
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== PROJECT LIST ===== */
+
+.projects-list {
+  padding: 80px 0;
+}
+
+.projects-list h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.projects-list hr {
+  width: 100px;
+  margin: auto;
+  margin-bottom: 40px;
+  border: 2px solid #2563eb;
+  opacity: 1;
+}
+
+/* ===== PROJECT CARDS ===== */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h5 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.card-body p {
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* ===== PROJECT BUTTON ===== */
+
+.btn-primary {
+  background: #2563eb;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* ===== FLOATING ANIMATION ===== */
+
+.card {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .projects-intro {
+    text-align: center;
+    min-height: auto;
+    padding: 50px 0;
+  }
+
+  .n-box2 h1 {
+    font-size: 2.2rem;
+  }
+
+  .n-box2 p {
+    font-size: 1rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+}
