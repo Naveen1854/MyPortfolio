@@ -10,12 +10,17 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  showHeader: boolean = false;
 
-  constructor(public router: Router) { }
+  showMenu = false;
 
-  toggleHeader() {
-    this.showHeader = !this.showHeader;
+  constructor(private router: Router) {}
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  closeMenu() {
+    this.showMenu = false;
   }
 
   isActive(route: string): boolean {

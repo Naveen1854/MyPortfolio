@@ -1,23 +1,61 @@
-<div class="header">
-  <!-- Hamburger / Close icon -->
-  <span
-    class="menu-icon position-fixed top-0 end-0"
-    (click)="toggleHeader()"
-    [innerHTML]="showHeader ? '&#10005;' : '&#9776;'"
-  ></span>
+<!-- Toggle Button -->
+<button class="menu-btn" (click)="toggleMenu()">
+  ☰
+</button>
 
-  <ul [class]="showHeader ? 'show-header n-box1' : 'hide-header n-box1'">
-    <li [class.active]="isActive('/')">
-      <a routerLink="/" class="header-links" (click)="toggleHeader()">Home</a>
-    </li>
-    <li [class.active]="isActive('/projects')">
-      <a routerLink="/projects" class="header-links" (click)="toggleHeader()">Projects</a>
-    </li>
-    <li [class.active]="isActive('/contact')">
-      <a routerLink="/contact" class="header-links" (click)="toggleHeader()">Contact</a>
-    </li>
-    <li [class.active]="isActive('/courses')">
-      <a routerLink="/courses" class="header-links" (click)="toggleHeader()">Skills and Resume</a>
-    </li>
-  </ul>
+<!-- Overlay -->
+<div
+  class="overlay"
+  *ngIf="showMenu"
+  (click)="closeMenu()">
 </div>
+
+<!-- Sidebar -->
+<nav class="sidebar" [class.open]="showMenu">
+
+  <div class="logo">
+    𝒫𝑜𝓇𝓉𝒻𝑜𝓁𝒾𝑜
+  </div>
+
+
+  <a
+    routerLink="/"
+    class="nav-link"
+    [class.active]="isActive('/')"
+    (click)="closeMenu()">
+    About
+  </a>
+
+  <a
+    routerLink="/"
+    class="nav-link"
+    [class.active]="isActive('/')"
+    (click)="closeMenu()">
+    Home
+  </a>
+
+  <a
+    routerLink="/projects"
+    class="nav-link"
+    [class.active]="isActive('/projects')"
+    (click)="closeMenu()">
+    Projects
+  </a>
+
+  <a
+    routerLink="/contact"
+    class="nav-link"
+    [class.active]="isActive('/contact')"
+    (click)="closeMenu()">
+    Contact
+  </a>
+
+  <a
+    routerLink="/courses"
+    class="nav-link"
+    [class.active]="isActive('/courses')"
+    (click)="closeMenu()">
+    Skills & Resume
+  </a>
+
+</nav>

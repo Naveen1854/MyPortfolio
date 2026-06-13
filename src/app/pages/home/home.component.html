@@ -2,31 +2,58 @@
   <!-- Header -->
   <app-header></app-header>
 
-  <!-- Introduction -->
-  <div class="introduction flex-with-center" style="background-image: url('./assets/images/background.svg')">
-    <div>
-      <h1 data-aos="fade-up">Naveen Kusuma</h1>
-      <div class="intro-content d-flex justify-content-between">
-        <p>Full Stack Developer specializing in 
-          <br/> Java and Spring Boot.
+  <!-- Hero Section -->
+  <div class="introduction"
+  style="background-image: url('./assets/images/background.svg')">
+
+  <div class="container min-vh-100 d-flex align-items-center">
+
+    <div class="row align-items-center w-100">
+
+      <div class="col-lg-7 hero-content">
+
+        <h1 class="hero-title">
+          Hi, I'm <span>Naveen Kusuma</span>
+        </h1>
+
+        <h3 class="hero-subtitle">
+          Java Full Stack Developer
+        </h3>
+
+        <p class="hero-description">
+          Passionate about building scalable web applications using Java,
+          Spring Boot, Angular, Hibernate, and MySQL.
+          Currently exploring Artificial Intelligence (AI) technologies.
         </p>
-           
-        <button class="primary-button font-bold">
-          <a href="https://drive.google.com/file/d/1oEL9HY-Wn9Y5VNZBAUJ5TLH2T9FPZHA1/view?usp=sharing" target="_blank"
-            style="text-decoration: none; color: red; font-weight: bold;">
-            My Resume
-          </a>
-        </button>
+
+        <a
+          href="https://drive.google.com/file/d/1oEL9HY-Wn9Y5VNZBAUJ5TLH2T9FPZHA1/view?usp=sharing"
+          target="_blank"
+          class="btn btn-danger mt-3">
+          Download Resume
+        </a>
       </div>
+
+      <div class="col-lg-5 text-center">
+        <img
+          src="./assets/images/Naveen.jpg"
+          alt="Developer"
+          class="img-fluid">
+      </div>
+
     </div>
   </div>
+</div>
+
 
   <!-- Skillsets Carousel -->
   <app-carousel></app-carousel>
 
+
   <!-- Waves -->
   <img src="./assets/images/wave.svg" alt="" class="w-100 d-block" />
 
+  
   <!-- About -->
   <div class="container">
 
@@ -69,7 +96,7 @@
   <hr />
   <br />
   <div>
-    <h3 class="font-bold text-center">My Experience</h3><br/>
+    <h3 class="font-bold text-center">My Experience</h3><br />
     <div class="experience-card mx-auto">
       <img src="./assets/images/Infosys-Logo.png" alt="Infosys Logo" class="experience-logo" />
       <div class="experience-details">
@@ -89,10 +116,10 @@
     </div>
   </div>
 
-  <br/><br />
+  <br /><br />
 
   <!-- Skills Section -->
-   <hr/>
+  <hr />
   <div class="devstack container mt-5 n-box2 py-5 my-5">
     <div class="text-center">
       <h2 class="font-bold mb-5">My Skill-sets</h2>
@@ -135,5 +162,5 @@
       </div>
     </div>
   </div>
-
+  <app-footer></app-footer>
 </div>
