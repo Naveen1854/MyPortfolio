@@ -4,10 +4,7 @@
 </button>
 
 <!-- Overlay -->
-<div
-  class="overlay"
-  *ngIf="showMenu"
-  (click)="closeMenu()">
+<div class="overlay" *ngIf="showMenu" (click)="closeMenu()">
 </div>
 
 <!-- Sidebar -->
@@ -17,45 +14,28 @@
     𝒫𝑜𝓇𝓉𝒻𝑜𝓁𝒾𝑜
   </div>
 
-
-  <a
-    routerLink="/"
-    class="nav-link"
-    [class.active]="isActive('/')"
-    (click)="closeMenu()">
-    About
-  </a>
-
-  <a
-    routerLink="/"
-    class="nav-link"
-    [class.active]="isActive('/')"
-    (click)="closeMenu()">
+  <a routerLink="/" class="nav-link" [class.active]="isActive('/')" (click)="closeMenu()">
     Home
   </a>
 
-  <a
-    routerLink="/projects"
-    class="nav-link"
-    [class.active]="isActive('/projects')"
-    (click)="closeMenu()">
+  <a routerLink="/about" class="nav-link" [class.active]="isActive('/about')" (click)="closeMenu()">
+    About
+  </a>
+
+  <a routerLink="/courses" class="nav-link" [class.active]="isActive('/courses')" (click)="closeMenu()">
+    Skills
+  </a>
+
+  <a routerLink="/projects" class="nav-link" [class.active]="isActive('/projects')" (click)="closeMenu()">
     Projects
   </a>
 
-  <a
-    routerLink="/contact"
-    class="nav-link"
-    [class.active]="isActive('/contact')"
-    (click)="closeMenu()">
-    Contact
+  <a routerLink="/certifications" class="nav-link" [class.active]="isActive('/certifications')" (click)="closeMenu()">
+    Certifications
   </a>
 
-  <a
-    routerLink="/courses"
-    class="nav-link"
-    [class.active]="isActive('/courses')"
-    (click)="closeMenu()">
-    Skills & Resume
+  <a routerLink="/contact" class="nav-link" [class.active]="isActive('/contact')" (click)="closeMenu()">
+    Contact
   </a>
 
 </nav>

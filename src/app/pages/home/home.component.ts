@@ -5,15 +5,17 @@ import { CarouselComponent } from "../../components/carousel/carousel.component"
 import { HeaderComponent } from "../../components/header/header.component";
 import { ContactComponent } from "../contact/contact.component";
 import { FooterComponent } from "../../components/footer/footer.component";
+import { CertificationsComponent } from "../certifications/certifications.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, CarouselComponent, ContactComponent, FooterComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, CarouselComponent, ContactComponent, FooterComponent, CertificationsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+certificates: any;
 
   //   profileData = {
   //   Name: 'Naveen Kusuma',
