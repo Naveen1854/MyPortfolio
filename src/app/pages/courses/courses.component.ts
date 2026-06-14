@@ -24,8 +24,8 @@ export class CoursesComponent {
     { title: 'Git and Version Control', image: './assets/images/git.svg' }
   ];
 
-  scrollToWhyMe() {
-    document.getElementById('whyme')?.scrollIntoView({
+  scrollToMySkills() {
+    document.getElementById('MySkills')?.scrollIntoView({
       behavior: 'smooth'
     });
   }
