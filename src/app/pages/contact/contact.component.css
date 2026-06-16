@@ -1,47 +1,27 @@
-  .contact {
-      margin-top: 0 !important;
-      padding: 0 !important;
-  }
+.contact {
+  min-height: 80vh;
+}
 
-  .contact-form {
-      padding: 15px !important;
-      margin: 15px;
-  }
+.contact-card {
+  padding: 30px;
+  border: none;
+  border-radius: 15px;
+}
 
-  .contact img {
-      height: 50vh;
-      width: 100%;
-  }
+.contact-image {
+  max-width: 400px;
+}
 
-  .contact {
-      padding-top: 50px;
-  }
+.form-control {
+  padding: 12px;
+  border-radius: 10px;
+}
 
-  input,
-  textarea {
-      margin-top: 25px;
-      border: none !important;
-      background-color: #EBECF0 !important;
-      background: #ebecf0;
-      box-shadow: 5px 5px 0px #cacbce, -5px -5px 0px #ffffff !important;
-      border-radius: 20px !important;
-  }
+.form-control:focus {
+  box-shadow: none;
+}
 
-  .form-control {
-      box-shadow: none;
-  }
-
-  .form-control:focus {
-      transform: scale(1.03);
-  }
-
-  .contact button {
-      background-color: rgba(0, 0, 255, 0.859);
-      color: white;
-      border: none;
-      font-weight: bold;
-      border-radius: 25px;
-      padding: 5px 15px;
-      width: auto;
-      text-align: center;
-  }
+.btn {
+  border-radius: 10px;
+  min-width: 180px;
+}

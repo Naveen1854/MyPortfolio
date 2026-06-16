@@ -33,26 +33,6 @@
   margin-bottom: 25px;
 }
 
-/* ===== BUTTON ===== */
-
-.primary-button {
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.primary-button:hover {
-  background: #1d4ed8;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-}
-
 /* ===== PROJECT LIST ===== */
 
 .projects-list {
@@ -112,22 +92,6 @@
   color: #666;
   line-height: 1.6;
   flex-grow: 1;
-}
-
-/* ===== PROJECT BUTTON ===== */
-
-.btn-primary {
-  background: #2563eb;
-  border: none;
-  border-radius: 25px;
-  font-weight: 600;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #1d4ed8;
-  transform: scale(1.05);
 }
 
 /* ===== FLOATING ANIMATION ===== */

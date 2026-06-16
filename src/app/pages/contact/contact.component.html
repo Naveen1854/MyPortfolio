@@ -1,28 +1,154 @@
 <div>
   <app-header></app-header>
 
-  <div class="container contact mt-5">
-    <div class="row pt-5">
-      <div class="col-md-6 p-5">
-        <img src="./assets/images/contactme.svg" alt="contact-us" />
+  <div class="container contact py-5">
+
+    <div class="row align-items-center">
+
+      <!-- Left Side Image -->
+
+      <div class="col-md-6 text-center mb-4 mb-md-0">
+
+        <img
+          src="./assets/images/contactme.svg"
+          alt="Contact Me"
+          class="img-fluid contact-image"
+        >
+
       </div>
 
+      <!-- Contact Form -->
+
       <div class="col-md-6">
-        <form
-          class="contact-form m-2 p-5 n-box2"
-          action="mailto:kusuma.naveen1854@gmail.com"
-          method="post"
-          enctype="text/plain"
-          (ngSubmit)="onSubmit()"
-        >
-          <h3 class="font-bold">Contact Me</h3>
-          <hr />
-          <input type="text" class="form-control" name="Name" placeholder="Name" />
-          <input type="email" class="form-control" name="Email" placeholder="Email" />
-          <textarea class="form-control" name="Description" rows="3" placeholder="Description"></textarea>
-          <button class="primary-button mt-3" type="submit">SUBMIT</button>
-        </form>
+
+        <div class="card contact-card shadow-sm">
+
+          <h2>Get In Touch</h2>
+
+          <p class="text-muted mb-4">
+            Have a question or want to work together?
+            Feel free to contact me.
+          </p>
+
+          <form
+            [formGroup]="contactForm"
+            (ngSubmit)="onSubmit()"
+          >
+
+            <!-- Name -->
+
+            <div class="mb-3">
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+                formControlName="name"
+              >
+
+              @if(contactForm.get('name')?.touched &&
+                  contactForm.get('name')?.invalid){
+
+                <small class="text-danger">
+                  Name is required
+                </small>
+
+              }
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="mb-3">
+
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your Email"
+                formControlName="email"
+              >
+
+              @if(contactForm.get('email')?.touched &&
+                  contactForm.get('email')?.invalid){
+
+                <small class="text-danger">
+                  Enter a valid email
+                </small>
+
+              }
+
+            </div>
+
+            <!-- Message -->
+
+            <div class="mb-3">
+
+              <textarea
+                rows="5"
+                class="form-control"
+                placeholder="Your Message"
+                formControlName="message"
+              ></textarea>
+
+              @if(contactForm.get('message')?.touched &&
+                  contactForm.get('message')?.invalid){
+
+                <small class="text-danger">
+                  Message should contain at least 10 characters
+                </small>
+
+              }
+
+            </div>
+
+            <!-- Button -->
+
+            <div class="text-center">
+
+              <button
+                type="submit"
+                class="btn btn-dark px-4"
+                [disabled]="isSending"
+              >
+
+                {{ isSending ? 'Sending...' : 'Send Message' }}
+
+              </button>
+
+            </div>
+
+            <!-- Success -->
+
+            @if(successMessage){
+
+              <div class="alert alert-success mt-3">
+
+                {{ successMessage }}
+
+              </div>
+
+            }
+
+            <!-- Error -->
+
+            @if(errorMessage){
+
+              <div class="alert alert-danger mt-3">
+
+                {{ errorMessage }}
+
+              </div>
+
+            }
+
+          </form>
+
+        </div>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
