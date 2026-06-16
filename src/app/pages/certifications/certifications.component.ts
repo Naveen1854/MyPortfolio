@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-certifications',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './certifications.component.html',
   styleUrl: './certifications.component.css'
 })
@@ -20,14 +21,19 @@ export class CertificationsComponent {
       pdf: 'assets/certificates/IT Foundation in java.pdf'
     },
 
-    // Add more certificates here
+    {
+      title: 'Java (Basic) Certificate',
+      issuer: 'HackerRank',
+      image: 'assets/certificates/java_basic.jpg',
+      pdf: 'assets/certificates/java_basic.pdf'
+    },
 
-    // {
-    //   title: 'AWS Cloud Virtual Internship',
-    //   issuer: 'AWS Academy',
-    //   image: 'assets/certificates/aws.jpg',
-    //   pdf: 'assets/certificates/aws.pdf'
-    // }
+    {
+      title: 'Python for Data Science',
+      issuer: 'NPTEL Online Certification',
+      image: 'assets/certificates/Python for Data Science.jpg',
+      pdf: 'src/assets/certificates/NPTEL.pdf',
+    }
   ];
 
   nextCertificate(): void {
